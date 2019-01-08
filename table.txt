@@ -1,0 +1,101 @@
+ create table policy_questions(pol_ques_id number(10) primary key,bus_seg_id number(10),pol_ques_desc varchar2(80),pol_ques_ans1 varchar2(30),pol_ques_ans1_weightage number(5),pol_ques_ans2 varchar2(30),pol_ques_ans2_weightage number(5),pol_ques_ans3 varchar2(30),pol_ques_ans3_weightage number(5),foreign key(bus_seg_id) references business_Segment(bus_seg_id)); 
+
+ create table business_segment(bus_seg_id number(10),bus_seg_name varchar2(20)); 
+create table policy_questions(pol_ques_id number(10) primary key,bus_seg_id number(10),pol_ques_desc varchar2(80),pol_ques_ans1 varchar2(30),pol_ques_ans1_weightage number(5),pol_ques_ans2 varchar2(30),pol_ques_ans2_weightage number(5),pol_ques_ans3 varchar2(30),pol_ques_ans3_weightage number(5),foreign key(bus_seg_id) references business_Segment(bus_seg_id));
+
+Table created. 
+ 
+
+
+
+alter table business_segment add primary key(bus_seg_id);
+ insert into  business_segment values(1,'Business Auto');
+insert into  business_segment values(2,'Restaurant');
+ insert into  business_segment values(3,'Apartment');
+insert into  business_segment values(4,'General Merchant');
+insert into  policy_questions values(pol_seq.nextVal,1,'Vehicle Type','Light',200,'Heavy',400,'Truck',600);
+insert into  policy_questions values(pol_seq.nextVal,1,'Vehicle Model Year','Less than 2000',200,'2001 to 2010',400,'More than 2010',600);
+SQL> insert into  policy_questions values(pol_seq.nextVal,1,'Vehicle Model','High Segment',200,'Mid Segment',400,'Economy',600);
+
+1 row created.
+
+SQL> insert into  policy_questions values(pol_seq.nextVal,1,'Daily Commute Distance','Less than 21',200,'21 to 50',400,'Greater than 50',600);
+
+1 row created.
+
+SQL> insert into  policy_questions values(pol_seq.nextVal,1,'Service Centre','Authorised',200,'Non Authorised',400,null,600);
+
+1 row created.
+
+SQL> insert into  policy_questions values(pol_seq.nextVal,1,'Collision Coverage Limit','10000 to 30000',200,'30001 to 50000',400,'50001 to 100000',600);
+
+1 row created.
+
+SQL> insert into  policy_questions values(pol_seq.nextVal,1,'Collision Coverage Limit','10000 to 30000',200,'30001 to 50000',400,'50001 to 100000',600);
+
+1 row created.
+
+SQL> insert into  policy_questions values(pol_seq.nextVal,1,'Bodily Injury Limit','10000 to 30000',200,'30001 to 50000',400,'50001 to 100000',600);
+
+1 row created.
+
+ insert into  policy_questions values(pol_seq.nextVal,1,'Uninsured Motorist','10000 to 30000',200,'30001 to 50000',400,'50001 to 100000',600);
+
+1 row created.
+
+ insert into  policy_questions values(pol_seq.nextVal,1,'Unknown Hit or Theft Coverage','10000 to 30000',200,'30001 to 50000',400,'50001 to 100000',600);
+
+1 row created.
+
+ insert into  policy_questions values(pol_seq.nextVal,1,'Property and Liability','10000 to 30000',200,'30001 to 50000',400,'50001 to 100000',600);
+
+
+
+
+
+
+
+
+
+
+
+ insert into  policy_questions values(pol_seq.nextVal,2,'Restaurant Type','Only Dining',200,'Dining with Bar',400,'Dining with Bar 
+
+ insert into  policy_questions values(pol_seq.nextVal,2,'Restaurant Type','Only Dining',200,'Dining with Bar',400,'Dining with Bar and E.tainment',600);
+
+
+
+ insert into  policy_questions values(pol_seq.nextVal,2,'Restaurant SQ ft','less than 1500 SQ ft',200,'From 1500 to 5000 SQ ft',400,'More Than 5000',600);
+
+
+
+ insert into  policy_questions values(pol_seq.nextVal,2,'Number Of Sprinklers','Upto 20',200,'21 to 40',400,'More Than 40',600);
+
+
+
+insert into  policy_questions values(pol_seq.nextVal,2,'Number Of Cylinders in Kitchen','Upto 5',200,'From 6 to 15',400,'More Than 15',600);
+
+
+
+ insert into  policy_questions values(pol_seq.nextVal,2,'Fine Arts','5000 to 15000',200,'15000 to 30000',400,'More Than 30000',600);
+
+
+SQL> insert into policy_questions values(pol_seq.nextval,2,'property damage','up to 500000',200,'from 500000 to 1500000',400,'more than 1500000',600);
+
+1 row created.
+
+SQL> insert into policy_questions values(pol_seq.nextval,2,'equipment breakdown','up to 50000',200,'from 50000 to 200000',400,'more than 200000',600);
+
+1 row created.
+
+SQL> insert into policy_questions values(pol_seq.nextval,2,'liability Coverage','10000 to 15000',200,'15001 to 30000',400,'more than 30000',600);
+
+1 row created.
+
+SQL> insert into policy_questions values(pol_seq.nextval,2,'liability Coverage','10000 to 15000',200,'15001 to 30000',400,'more than 30000',600);
+
+1 row created.
+
+SQL> insert into policy_questions values(pol_seq.nextval,2,'Bodily Injury','up to 25000',200,'25001 to 50000',400,'more than 50000',600);
+
+1 row created.
